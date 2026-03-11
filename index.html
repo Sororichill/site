@@ -59,6 +59,11 @@
     .step-line { position: relative; }
     .step-line::after { content: ''; position: absolute; top: 50%; right: -50%; width: 100%; height: 2px; background: linear-gradient(90deg, #D4B9A7, transparent); }
     @media (max-width: 768px) { .step-line::after { display: none; } }
+    .lang-toggle { display: flex; align-items: center; border-radius: 9999px; padding: 2px; font-size: 0.75rem; font-weight: 600; }
+    .lang-toggle button { padding: 3px 10px; border-radius: 9999px; transition: all 0.2s ease; cursor: pointer; border: none; background: none; }
+    .lang-toggle button.active { background: #C35817; color: white; }
+    .lang-toggle button:not(.active) { color: #5C3D2E; }
+    .lang-toggle button:not(.active):hover { color: #C35817; }
   </style>
 </head>
 <body class="bg-brand-50 text-brand-700 font-sans antialiased">
@@ -80,9 +85,13 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-500">
-          <a href="#fonctionnalites" class="hover:text-accent transition-colors">Fonctionnalités</a>
-          <a href="privacy.html" class="hover:text-accent transition-colors">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-accent transition-colors">Conditions d'utilisation</a>
+          <a href="#fonctionnalites" class="hover:text-accent transition-colors" data-i18n="nav_features">Fonctionnalités</a>
+          <a href="privacy.html" class="hover:text-accent transition-colors" data-i18n="nav_privacy">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-accent transition-colors" data-i18n="nav_terms">Conditions d'utilisation</a>
+          <div class="lang-toggle bg-brand-200/60">
+            <button id="langFrDesktop" onclick="setLanguage('fr')">FR</button>
+            <button id="langEnDesktop" onclick="setLanguage('en')">EN</button>
+          </div>
         </nav>
 
         <!-- Mobile Hamburger -->
@@ -96,9 +105,13 @@
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-brand-200/60">
         <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-brand-500">
-          <a href="#fonctionnalites" class="hover:text-accent transition-colors py-1">Fonctionnalités</a>
-          <a href="privacy.html" class="hover:text-accent transition-colors py-1">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-accent transition-colors py-1">Conditions d'utilisation</a>
+          <a href="#fonctionnalites" class="hover:text-accent transition-colors py-1" data-i18n="nav_features">Fonctionnalités</a>
+          <a href="privacy.html" class="hover:text-accent transition-colors py-1" data-i18n="nav_privacy">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-accent transition-colors py-1" data-i18n="nav_terms">Conditions d'utilisation</a>
+          <div class="lang-toggle bg-brand-200/60 self-start mt-1">
+            <button id="langFrMobile" onclick="setLanguage('fr')">FR</button>
+            <button id="langEnMobile" onclick="setLanguage('en')">EN</button>
+          </div>
         </nav>
       </div>
     </div>
@@ -125,10 +138,10 @@
         </div>
       </div>
 
-      <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-brand-700 leading-tight mb-6 fade-up">
+      <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-brand-700 leading-tight mb-6 fade-up" data-i18n-html="hero_title">
         Découvrez et partagez des <span class="text-accent">moments entre femmes</span> qui vous ressemblent.
       </h1>
-      <p class="text-lg sm:text-xl text-brand-500 max-w-2xl mx-auto mb-10 leading-relaxed fade-up">
+      <p class="text-lg sm:text-xl text-brand-500 max-w-2xl mx-auto mb-10 leading-relaxed fade-up" data-i18n="hero_subtitle">
         Sororichill est la plateforme qui vous connecte à des activités inspirantes — créatives, sportives, culturelles ou bien-être — dans une communauté bienveillante et sororale.
       </p>
 
@@ -136,11 +149,11 @@
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up">
         <a href="#" class="inline-flex items-center gap-3 bg-brand-700 text-white px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-brand-500 transition-colors shadow-lg shadow-brand-700/20">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Télécharger sur l'App Store
+          <span data-i18n="cta_appstore">Télécharger sur l'App Store</span>
         </a>
         <a href="#" class="inline-flex items-center gap-3 bg-white text-brand-700 px-6 py-3.5 rounded-xl font-semibold text-sm border-2 border-brand-200 hover:border-accent hover:text-accent transition-colors shadow-sm">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.627L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-          Disponible sur Google Play
+          <span data-i18n="cta_googleplay">Disponible sur Google Play</span>
         </a>
       </div>
     </div>
@@ -150,52 +163,52 @@
   <section id="fonctionnalites" class="py-20 sm:py-28">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 fade-up">
-        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3">Fonctionnalités</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700">Des expériences pour chaque envie</h2>
-        <p class="text-brand-500 mt-4 max-w-xl mx-auto">Explorez une variété d'activités soigneusement sélectionnées, pensées pour créer des liens authentiques entre femmes.</p>
+        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="features_label">Fonctionnalités</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700" data-i18n="features_title">Des expériences pour chaque envie</h2>
+        <p class="text-brand-500 mt-4 max-w-xl mx-auto" data-i18n="features_desc">Explorez une variété d'activités soigneusement sélectionnées, pensées pour créer des liens authentiques entre femmes.</p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Creative -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FFF4E0;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#C3581715;">🎨</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#C35817;">Activités Créatives</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Ateliers peinture, poterie, écriture… Libérez votre créativité dans un espace chaleureux et inspirant.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#C35817;" data-i18n="feat_creative_title">Activités Créatives</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_creative_desc">Ateliers peinture, poterie, écriture… Libérez votre créativité dans un espace chaleureux et inspirant.</p>
         </div>
 
         <!-- Sportive -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#E8F0E6;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#4A674115;">🏃‍♀️</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A6741;">Aventures Sportives</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Randonnées, yoga, danse, escalade… Repoussez vos limites et bougez ensemble en plein air ou en salle.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A6741;" data-i18n="feat_sport_title">Aventures Sportives</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_sport_desc">Randonnées, yoga, danse, escalade… Repoussez vos limites et bougez ensemble en plein air ou en salle.</p>
         </div>
 
         <!-- Cultural -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#F0E4EE;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#4A204015;">🎭</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A2040;">Expériences Culturelles</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Musées, théâtre, conférences, sorties littéraires… Nourrissez votre curiosité en bonne compagnie.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A2040;" data-i18n="feat_cultural_title">Expériences Culturelles</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_cultural_desc">Musées, théâtre, conférences, sorties littéraires… Nourrissez votre curiosité en bonne compagnie.</p>
         </div>
 
         <!-- Wellness -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FCEDE8;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#CB6B5215;">🧘</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#CB6B52;">Bien-être & Relaxation</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Spa, méditation, soins holistiques… Prenez soin de vous dans un cadre apaisant et bienveillant.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#CB6B52;" data-i18n="feat_wellness_title">Bien-être & Relaxation</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_wellness_desc">Spa, méditation, soins holistiques… Prenez soin de vous dans un cadre apaisant et bienveillant.</p>
         </div>
 
         <!-- Social -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FFE8E0;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#E8836B15;">🤝</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#E8836B;">Rencontres Sociales</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Brunchs, afterworks, soirées jeux… Tissez des amitiés sincères autour de moments conviviaux.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#E8836B;" data-i18n="feat_social_title">Rencontres Sociales</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_social_desc">Brunchs, afterworks, soirées jeux… Tissez des amitiés sincères autour de moments conviviaux.</p>
         </div>
 
         <!-- Local -->
         <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#F5F0E8;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#5C3D2E15;">📍</div>
-          <h3 class="font-display font-semibold text-lg mb-2" style="color:#5C3D2E;">Découverte Locale</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Explorez les pépites cachées de votre ville. Marchés, quartiers insolites, balades guidées… le tout entre femmes.</p>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#5C3D2E;" data-i18n="feat_local_title">Découverte Locale</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="feat_local_desc">Explorez les pépites cachées de votre ville. Marchés, quartiers insolites, balades guidées… le tout entre femmes.</p>
         </div>
       </div>
     </div>
@@ -205,8 +218,8 @@
   <section class="py-20 sm:py-28 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 fade-up">
-        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3">Comment ça marche</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700">Trois étapes, c'est tout.</h2>
+        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3" data-i18n="how_label">Comment ça marche</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700" data-i18n="how_title">Trois étapes, c'est tout.</h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-10 md:gap-8">
@@ -215,8 +228,8 @@
           <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5">
             <span class="font-display font-bold text-2xl text-accent">1</span>
           </div>
-          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Découvrez</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Parcourez des activités triées par catégorie, lieu et date. Trouvez celle qui vous correspond en un clin d'œil.</p>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2" data-i18n="step1_title">Découvrez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="step1_desc">Parcourez des activités triées par catégorie, lieu et date. Trouvez celle qui vous correspond en un clin d'œil.</p>
         </div>
 
         <!-- Step 2 -->
@@ -224,8 +237,8 @@
           <div class="w-16 h-16 rounded-2xl bg-category-sportive/10 flex items-center justify-center mx-auto mb-5">
             <span class="font-display font-bold text-2xl text-category-sportive">2</span>
           </div>
-          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Réservez</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Inscrivez-vous en quelques taps. Paiement sécurisé, confirmation instantanée, tout est simple et fluide.</p>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2" data-i18n="step2_title">Réservez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="step2_desc">Inscrivez-vous en quelques taps. Paiement sécurisé, confirmation instantanée, tout est simple et fluide.</p>
         </div>
 
         <!-- Step 3 -->
@@ -233,8 +246,8 @@
           <div class="w-16 h-16 rounded-2xl bg-accent-warm/10 flex items-center justify-center mx-auto mb-5">
             <span class="font-display font-bold text-2xl text-accent-warm">3</span>
           </div>
-          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Profitez</h3>
-          <p class="text-brand-500 text-sm leading-relaxed">Vivez l'expérience, rencontrez des femmes inspirantes et créez des souvenirs inoubliables ensemble.</p>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2" data-i18n="step3_title">Profitez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed" data-i18n="step3_desc">Vivez l'expérience, rencontrez des femmes inspirantes et créez des souvenirs inoubliables ensemble.</p>
         </div>
       </div>
     </div>
@@ -249,21 +262,21 @@
     </div>
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-5 fade-up">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-5 fade-up" data-i18n="cta_title">
         Prête à rejoindre la communauté ?
       </h2>
-      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto fade-up">
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto fade-up" data-i18n="cta_desc">
         Téléchargez Sororichill et commencez à découvrir des activités uniques près de chez vous, entourée de femmes bienveillantes.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up">
         <a href="#" class="inline-flex items-center gap-3 bg-white text-brand-700 px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-brand-50 transition-colors shadow-lg">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          App Store
+          <span data-i18n="cta_appstore_short">App Store</span>
         </a>
         <a href="#" class="inline-flex items-center gap-3 bg-white/15 text-white border-2 border-white/30 px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-white/25 transition-colors">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.627L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-          Google Play
+          <span data-i18n="cta_googleplay_short">Google Play</span>
         </a>
       </div>
     </div>
@@ -284,21 +297,21 @@
             </svg>
             <span class="font-display font-bold text-lg text-white">Sororichill</span>
           </div>
-          <p class="text-sm text-white/50 max-w-xs text-center md:text-left">Des moments uniques entre femmes, partout près de chez vous.</p>
+          <p class="text-sm text-white/50 max-w-xs text-center md:text-left" data-i18n="footer_tagline">Des moments uniques entre femmes, partout près de chez vous.</p>
         </div>
 
         <!-- Legal Links -->
         <div class="flex flex-col items-center md:items-end gap-3 text-sm">
-          <span class="font-semibold text-white/90 text-xs uppercase tracking-wide">Informations légales</span>
-          <a href="privacy.html" class="hover:text-white transition-colors">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-white transition-colors">Conditions d'utilisation</a>
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">CLUF Apple</a>
+          <span class="font-semibold text-white/90 text-xs uppercase tracking-wide" data-i18n="footer_legal_label">Informations légales</span>
+          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="nav_privacy">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-white transition-colors" data-i18n="nav_terms">Conditions d'utilisation</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" data-i18n="footer_eula">CLUF Apple</a>
         </div>
       </div>
 
       <!-- Bottom bar -->
       <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-white/40">© 2025 Sororichill. Tous droits réservés.</p>
+        <p class="text-xs text-white/40" data-i18n="footer_copyright">© 2025 Sororichill. Tous droits réservés.</p>
         <!-- Social Icons -->
         <div class="flex items-center gap-4">
           <a href="https://www.instagram.com/sororichill" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-accent transition-colors" aria-label="Instagram">
@@ -315,27 +328,158 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => {
+    // ---- i18n System ----
+    const translations = {
+      fr: {
+        nav_features: 'Fonctionnalités',
+        nav_privacy: 'Politique de confidentialité',
+        nav_terms: "Conditions d'utilisation",
+        hero_title: 'Découvrez et partagez des <span class="text-accent">moments entre femmes</span> qui vous ressemblent.',
+        hero_subtitle: 'Sororichill est la plateforme qui vous connecte à des activités inspirantes — créatives, sportives, culturelles ou bien-être — dans une communauté bienveillante et sororale.',
+        cta_appstore: "Télécharger sur l'App Store",
+        cta_googleplay: 'Disponible sur Google Play',
+        features_label: 'Fonctionnalités',
+        features_title: 'Des expériences pour chaque envie',
+        features_desc: "Explorez une variété d'activités soigneusement sélectionnées, pensées pour créer des liens authentiques entre femmes.",
+        feat_creative_title: 'Activités Créatives',
+        feat_creative_desc: 'Ateliers peinture, poterie, écriture… Libérez votre créativité dans un espace chaleureux et inspirant.',
+        feat_sport_title: 'Aventures Sportives',
+        feat_sport_desc: 'Randonnées, yoga, danse, escalade… Repoussez vos limites et bougez ensemble en plein air ou en salle.',
+        feat_cultural_title: 'Expériences Culturelles',
+        feat_cultural_desc: 'Musées, théâtre, conférences, sorties littéraires… Nourrissez votre curiosité en bonne compagnie.',
+        feat_wellness_title: 'Bien-être & Relaxation',
+        feat_wellness_desc: 'Spa, méditation, soins holistiques… Prenez soin de vous dans un cadre apaisant et bienveillant.',
+        feat_social_title: 'Rencontres Sociales',
+        feat_social_desc: 'Brunchs, afterworks, soirées jeux… Tissez des amitiés sincères autour de moments conviviaux.',
+        feat_local_title: 'Découverte Locale',
+        feat_local_desc: 'Explorez les pépites cachées de votre ville. Marchés, quartiers insolites, balades guidées… le tout entre femmes.',
+        how_label: 'Comment ça marche',
+        how_title: "Trois étapes, c'est tout.",
+        step1_title: 'Découvrez',
+        step1_desc: "Parcourez des activités triées par catégorie, lieu et date. Trouvez celle qui vous correspond en un clin d'œil.",
+        step2_title: 'Réservez',
+        step2_desc: 'Inscrivez-vous en quelques taps. Paiement sécurisé, confirmation instantanée, tout est simple et fluide.',
+        step3_title: 'Profitez',
+        step3_desc: 'Vivez l'expérience, rencontrez des femmes inspirantes et créez des souvenirs inoubliables ensemble.',
+        cta_title: 'Prête à rejoindre la communauté ?',
+        cta_desc: 'Téléchargez Sororichill et commencez à découvrir des activités uniques près de chez vous, entourée de femmes bienveillantes.',
+        cta_appstore_short: 'App Store',
+        cta_googleplay_short: 'Google Play',
+        footer_tagline: 'Des moments uniques entre femmes, partout près de chez vous.',
+        footer_legal_label: 'Informations légales',
+        footer_eula: 'CLUF Apple',
+        footer_copyright: '© 2025 Sororichill. Tous droits réservés.',
+        page_title: 'Sororichill — Découvrez et partagez des moments entre femmes',
+        meta_description: "Sororichill est une plateforme de découverte et de réservation d'activités pensée pour les femmes. Rejoignez une communauté bienveillante et vivez des expériences uniques.",
+      },
+      en: {
+        nav_features: 'Features',
+        nav_privacy: 'Privacy Policy',
+        nav_terms: 'Terms of Service',
+        hero_title: 'Discover and share <span class="text-accent">moments with women</span> like you.',
+        hero_subtitle: 'Sororichill is the platform that connects you to inspiring activities — creative, sports, cultural or wellness — in a caring and supportive community.',
+        cta_appstore: 'Download on the App Store',
+        cta_googleplay: 'Get it on Google Play',
+        features_label: 'Features',
+        features_title: 'Experiences for every mood',
+        features_desc: 'Explore a variety of carefully curated activities designed to create genuine connections between women.',
+        feat_creative_title: 'Creative Activities',
+        feat_creative_desc: 'Painting, pottery, writing workshops… Unleash your creativity in a warm and inspiring space.',
+        feat_sport_title: 'Sports Adventures',
+        feat_sport_desc: 'Hiking, yoga, dance, climbing… Push your limits and move together, indoors or outdoors.',
+        feat_cultural_title: 'Cultural Experiences',
+        feat_cultural_desc: 'Museums, theatre, talks, literary outings… Feed your curiosity in great company.',
+        feat_wellness_title: 'Wellness & Relaxation',
+        feat_wellness_desc: 'Spa, meditation, holistic care… Take care of yourself in a soothing and caring setting.',
+        feat_social_title: 'Social Gatherings',
+        feat_social_desc: 'Brunches, after-work drinks, game nights… Build genuine friendships around fun moments.',
+        feat_local_title: 'Local Discovery',
+        feat_local_desc: 'Explore hidden gems in your city. Markets, quirky neighbourhoods, guided walks… all among women.',
+        how_label: 'How it works',
+        how_title: 'Three steps, that\'s it.',
+        step1_title: 'Discover',
+        step1_desc: 'Browse activities sorted by category, location and date. Find the perfect one in no time.',
+        step2_title: 'Book',
+        step2_desc: 'Sign up in a few taps. Secure payment, instant confirmation — simple and seamless.',
+        step3_title: 'Enjoy',
+        step3_desc: 'Live the experience, meet inspiring women and create unforgettable memories together.',
+        cta_title: 'Ready to join the community?',
+        cta_desc: 'Download Sororichill and start discovering unique activities near you, surrounded by supportive women.',
+        cta_appstore_short: 'App Store',
+        cta_googleplay_short: 'Google Play',
+        footer_tagline: 'Unique moments among women, right near you.',
+        footer_legal_label: 'Legal information',
+        footer_eula: 'Apple EULA',
+        footer_copyright: '© 2025 Sororichill. All rights reserved.',
+        page_title: 'Sororichill — Discover and share moments among women',
+        meta_description: 'Sororichill is a platform for discovering and booking activities designed for women. Join a caring community and live unique experiences.',
+      }
+    };
+
+    let currentLang = 'fr';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+
+      // Update text content
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update HTML content (for elements with inline markup)
+      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n-html');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Update meta tags
+      document.title = translations[lang].page_title;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', translations[lang].meta_description);
+
+      // Update toggle button states
+      document.querySelectorAll('[id^="langFr"]').forEach(function(btn) {
+        btn.classList.toggle('active', lang === 'fr');
+      });
+      document.querySelectorAll('[id^="langEn"]').forEach(function(btn) {
+        btn.classList.toggle('active', lang === 'en');
+      });
+    }
+
+    // Auto-detect language on load
+    (function() {
+      var saved = localStorage.getItem('lang');
+      var browser = (navigator.language || navigator.userLanguage || 'fr').startsWith('fr') ? 'fr' : 'en';
+      setLanguage(saved || browser);
+    })();
+
+    // ---- Mobile menu toggle ----
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', function() {
       mobileMenu.classList.toggle('hidden');
     });
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() { mobileMenu.classList.add('hidden'); });
     });
 
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    // ---- Scroll reveal ----
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
   </script>
 </body>
 </html>
