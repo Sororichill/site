@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Sororichill</title>
+  <meta name="description" content="Politique de confidentialité de l'application Sororichill. Découvrez comment nous protégeons vos données personnelles.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFFDF8',
+              100: '#FFF4E0',
+              200: '#F5F0E8',
+              300: '#D4B9A7',
+              400: '#C35817',
+              500: '#5C3D2E',
+              600: '#4A2040',
+              700: '#1A1A1A',
+            },
+            accent: {
+              DEFAULT: '#C35817',
+              light: '#E8836B',
+              warm: '#CB6B52',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @media print {
+      header, footer { display: none !important; }
+      .hero-banner { background: white !important; padding: 1rem 0 !important; }
+      .hero-banner h1 { color: #1A1A1A !important; }
+      body { font-size: 12pt; }
+    }
+  </style>
+</head>
+<body class="bg-brand-50 font-sans text-brand-700 antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-8 w-8">
+            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M700 300 A280 280 0 1 0 700 724"></path>
+              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+            </g>
+          </svg>
+          <span class="font-display font-bold text-xl text-accent">Sororichill</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="text-brand-500 hover:text-accent transition-colors">Accueil</a>
+          <a href="privacy.html" class="text-accent border-b-2 border-accent pb-0.5">Politique de confidentialité</a>
+          <a href="terms.html" class="text-brand-500 hover:text-accent transition-colors">Conditions d'utilisation</a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-brand-100 transition-colors" aria-label="Menu">
+          <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile nav -->
+      <nav id="mobile-menu" class="sm:hidden hidden pb-4 space-y-2">
+        <a href="index.html" class="block px-3 py-2 rounded-lg text-brand-500 hover:bg-brand-100 transition-colors">Accueil</a>
+        <a href="privacy.html" class="block px-3 py-2 rounded-lg bg-brand-100 text-accent font-medium">Politique de confidentialité</a>
+        <a href="terms.html" class="block px-3 py-2 rounded-lg text-brand-500 hover:bg-brand-100 transition-colors">Conditions d'utilisation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner bg-gradient-to-br from-brand-50 via-brand-100 to-orange-50 py-16 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-brand-500 mb-4">Politique de confidentialité</h1>
+      <p class="text-brand-300 text-lg">Date d'effet : 11 mars 2025</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div class="space-y-12">
+
+      <!-- 1. Introduction -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">1. Introduction</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Sororichill s'engage à protéger votre vie privée. La présente politique de confidentialité décrit les types de données personnelles que nous collectons, la manière dont nous les utilisons, les partageons et les protégeons lorsque vous utilisez notre application mobile et nos services associés (ci-après « le Service »).</p>
+          <p>En utilisant Sororichill, vous acceptez les pratiques décrites dans la présente politique. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le Service.</p>
+          <p>Sororichill est une application destinée à faciliter l'organisation et la participation à des activités de bien-être entre femmes. Nous traitons vos données avec le plus grand soin et en conformité avec la réglementation applicable en matière de protection des données personnelles.</p>
+        </div>
+      </section>
+
+      <!-- 2. Données collectées -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">2. Données collectées</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous collectons les catégories de données suivantes dans le cadre de votre utilisation du Service :</p>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.1 Données de profil</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Nom et prénom</li>
+            <li>Adresse e-mail</li>
+            <li>Photo de profil (avatar)</li>
+            <li>Date de naissance (pour vérification de l'âge)</li>
+            <li>Pour les organisatrices : identité légale, informations complémentaires nécessaires à la vérification de compte</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.2 Données d'activités</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Activités créées, consultées et auxquelles vous participez</li>
+            <li>Préférences et centres d'intérêt</li>
+            <li>Évaluations et avis laissés</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.3 Données de réservation</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Historique des réservations</li>
+            <li>Statut des participations</li>
+            <li>Informations de facturation associées</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.4 Messages</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Messages échangés avec d'autres utilisatrices dans le cadre des activités</li>
+            <li>Communications avec notre service d'assistance</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.5 Données de localisation</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Localisation approximative pour la recherche d'activités à proximité</li>
+            <li>Adresses des lieux d'activités</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.6 Données de paiement</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Informations de paiement traitées de manière sécurisée par notre prestataire Stripe</li>
+            <li>Historique des transactions</li>
+            <li>Nous ne stockons jamais les numéros complets de cartes bancaires sur nos serveurs</li>
+          </ul>
+
+          <h3 class="font-semibold text-brand-500 mt-6">2.7 Données d'appareil</h3>
+          <ul class="list-disc list-inside space-y-1 ml-4">
+            <li>Type d'appareil et système d'exploitation</li>
+            <li>Identifiants uniques de l'appareil</li>
+            <li>Jetons de notification push</li>
+            <li>Informations de diagnostic et journaux d'erreurs</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. Utilisation des données -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">3. Utilisation des données</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous utilisons vos données personnelles aux fins suivantes :</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Fournir et maintenir le Service</strong> — créer et gérer votre compte, permettre la participation aux activités, faciliter la mise en relation entre utilisatrices.</li>
+            <li><strong>Traiter les paiements</strong> — gérer les transactions liées aux activités payantes et les reversements aux organisatrices via Stripe.</li>
+            <li><strong>Améliorer l'application</strong> — analyser l'utilisation du Service pour en améliorer les fonctionnalités, corriger les bugs et optimiser l'expérience utilisateur.</li>
+            <li><strong>Envoyer des notifications</strong> — vous informer des rappels d'activités, des messages reçus, des mises à jour du Service et des informations pertinentes liées à votre compte.</li>
+            <li><strong>Assurer la sécurité</strong> — détecter et prévenir les fraudes, abus et activités non autorisées sur la plateforme.</li>
+            <li><strong>Respecter nos obligations légales</strong> — nous conformer aux lois et réglementations applicables.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. Services tiers -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">4. Services tiers</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous faisons appel aux services tiers suivants pour le fonctionnement de Sororichill. Chacun de ces prestataires dispose de sa propre politique de confidentialité :</p>
+
+          <div class="grid gap-4 mt-6">
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Supabase</h3>
+              <p class="text-sm mt-1">Base de données et infrastructure backend. Héberge vos données de profil, activités et messages de manière sécurisée.</p>
+              <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Supabase →</a>
+            </div>
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Firebase</h3>
+              <p class="text-sm mt-1">Service de notifications push. Utilisé pour vous envoyer des rappels d'activités et des alertes importantes.</p>
+              <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Firebase →</a>
+            </div>
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Stripe</h3>
+              <p class="text-sm mt-1">Traitement sécurisé des paiements. Gère les transactions financières et les informations de carte bancaire.</p>
+              <a href="https://stripe.com/privacy" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Stripe →</a>
+            </div>
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Mapbox</h3>
+              <p class="text-sm mt-1">Services de localisation et cartographie. Permet l'affichage des cartes et la recherche d'activités à proximité.</p>
+              <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Mapbox →</a>
+            </div>
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Google Sign-In</h3>
+              <p class="text-sm mt-1">Authentification via votre compte Google. Nous accédons uniquement à votre nom, adresse e-mail et photo de profil.</p>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Google →</a>
+            </div>
+            <div class="bg-white rounded-xl border border-brand-200 p-5">
+              <h3 class="font-semibold text-brand-500">Apple Sign-In</h3>
+              <p class="text-sm mt-1">Authentification via votre identifiant Apple. Apple peut masquer votre adresse e-mail réelle via son service de relais privé.</p>
+              <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener" class="text-sm text-accent hover:underline mt-2 inline-block">Politique de confidentialité Apple →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Conservation et suppression -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">5. Conservation et suppression des données</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous conservons vos données personnelles aussi longtemps que nécessaire pour fournir le Service et satisfaire aux finalités décrites dans la présente politique.</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Données de compte</strong> — conservées pendant toute la durée de votre utilisation du Service et supprimées dans un délai de 30 jours suivant la suppression de votre compte.</li>
+            <li><strong>Données de transaction</strong> — conservées conformément aux obligations légales et comptables applicables (généralement 10 ans).</li>
+            <li><strong>Données de localisation</strong> — conservées uniquement le temps nécessaire à la fourniture des fonctionnalités de recherche.</li>
+            <li><strong>Journaux et diagnostics</strong> — conservés pendant une durée maximale de 90 jours.</li>
+          </ul>
+          <p>Vous pouvez demander la suppression de votre compte et de vos données à tout moment depuis les paramètres de l'application ou en nous contactant directement.</p>
+        </div>
+      </section>
+
+      <!-- 6. Mesures de sécurité -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">6. Mesures de sécurité</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, toute modification, divulgation ou destruction :</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>Chiffrement des données en transit (TLS/SSL) et au repos</li>
+            <li>Authentification sécurisée et gestion des sessions</li>
+            <li>Politiques de sécurité au niveau des lignes de base de données (Row Level Security)</li>
+            <li>Accès restreint aux données personnelles au sein de notre équipe</li>
+            <li>Surveillance continue et audits de sécurité réguliers</li>
+            <li>Traitement des paiements conforme aux normes PCI-DSS via Stripe</li>
+          </ul>
+          <p>Malgré ces mesures, aucune méthode de transmission ou de stockage électronique n'est totalement sûre. Nous ne pouvons garantir une sécurité absolue de vos données.</p>
+        </div>
+      </section>
+
+      <!-- 7. Vos droits -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">7. Vos droits</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Conformément à la réglementation applicable, vous disposez des droits suivants concernant vos données personnelles :</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Droit d'accès</strong> — obtenir la confirmation que vos données sont traitées et accéder à celles-ci.</li>
+            <li><strong>Droit de rectification</strong> — demander la correction de vos données inexactes ou incomplètes.</li>
+            <li><strong>Droit de suppression</strong> — demander l'effacement de vos données personnelles dans les conditions prévues par la loi.</li>
+            <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré, couramment utilisé et lisible par machine.</li>
+            <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos données pour des motifs légitimes.</li>
+            <li><strong>Droit à la limitation du traitement</strong> — demander la limitation du traitement de vos données dans certaines circonstances.</li>
+            <li><strong>Droit de retirer votre consentement</strong> — retirer votre consentement à tout moment lorsque le traitement est fondé sur celui-ci.</li>
+          </ul>
+          <p>Pour exercer l'un de ces droits, contactez-nous à l'adresse <a href="mailto:sororichill@gmail.com" class="text-accent hover:underline">sororichill@gmail.com</a>. Nous nous engageons à répondre à votre demande dans un délai de 30 jours.</p>
+        </div>
+      </section>
+
+      <!-- 8. Conformité RGPD -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">8. Conformité RGPD</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Sororichill s'engage à respecter le Règlement Général sur la Protection des Données (RGPD) de l'Union européenne. Nous traitons vos données personnelles sur les bases légales suivantes :</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Exécution du contrat</strong> — le traitement est nécessaire à l'exécution du Service auquel vous avez souscrit.</li>
+            <li><strong>Consentement</strong> — pour certains traitements spécifiques (par exemple, les notifications marketing), nous obtenons votre consentement préalable.</li>
+            <li><strong>Intérêt légitime</strong> — pour améliorer nos services, assurer la sécurité de la plateforme et prévenir les fraudes.</li>
+            <li><strong>Obligation légale</strong> — pour nous conformer à nos obligations légales et réglementaires.</li>
+          </ul>
+          <p>Si vos données sont transférées en dehors de l'Espace économique européen, nous veillons à ce que des garanties appropriées soient en place conformément au RGPD.</p>
+          <p>Vous avez le droit de déposer une réclamation auprès de l'autorité de contrôle compétente (en France, la <strong>CNIL</strong> — Commission Nationale de l'Informatique et des Libertés) si vous estimez que le traitement de vos données n'est pas conforme à la réglementation.</p>
+        </div>
+      </section>
+
+      <!-- 9. Protection des mineurs -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">9. Protection des mineurs</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Sororichill est exclusivement destiné aux personnes âgées de <strong>18 ans et plus</strong>. Nous ne collectons pas sciemment de données personnelles auprès de mineurs.</p>
+          <p>Si nous découvrons qu'un utilisateur est âgé de moins de 18 ans, nous prendrons les mesures nécessaires pour supprimer son compte et ses données personnelles dans les plus brefs délais.</p>
+          <p>Si vous êtes parent ou tuteur et que vous pensez que votre enfant mineur nous a fourni des données personnelles, veuillez nous contacter à <a href="mailto:sororichill@gmail.com" class="text-accent hover:underline">sororichill@gmail.com</a> afin que nous puissions prendre les mesures appropriées.</p>
+        </div>
+      </section>
+
+      <!-- 10. Cookies et suivi -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">10. Cookies et technologies de suivi</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Sororichill est une application mobile native et n'utilise pas de cookies au sens traditionnel du terme. Cependant, nous et nos prestataires tiers pouvons utiliser des technologies similaires :</p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li><strong>Stockage local</strong> — pour sauvegarder vos préférences et données de session sur votre appareil.</li>
+            <li><strong>Jetons d'authentification</strong> — pour maintenir votre connexion de manière sécurisée.</li>
+            <li><strong>Identifiants d'appareil</strong> — pour les notifications push et le diagnostic technique.</li>
+          </ul>
+          <p>Nous ne procédons à aucun suivi publicitaire. Nous n'utilisons pas de technologies de pistage à des fins de ciblage publicitaire tiers.</p>
+        </div>
+      </section>
+
+      <!-- 11. Modifications -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">11. Modifications de cette politique</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. En cas de modification substantielle, nous vous en informerons par le biais d'une notification dans l'application ou par e-mail avant l'entrée en vigueur des changements.</p>
+          <p>La date de « dernière mise à jour » en haut de cette page sera actualisée en conséquence. Nous vous encourageons à consulter régulièrement cette politique pour rester informé(e) de la manière dont nous protégeons vos données.</p>
+          <p>Votre utilisation continue du Service après la publication de modifications constitue votre acceptation de la politique mise à jour.</p>
+        </div>
+      </section>
+
+      <!-- 12. Contact -->
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-brand-500 mb-4">12. Nous contacter</h2>
+        <div class="space-y-4 text-brand-700/90 leading-relaxed">
+          <p>Pour toute question, demande ou préoccupation concernant la présente politique de confidentialité ou le traitement de vos données personnelles, vous pouvez nous contacter :</p>
+          <div class="bg-white rounded-xl border border-brand-200 p-6 mt-4">
+            <p class="font-semibold text-brand-500 mb-2">Sororichill — Protection des données</p>
+            <p>E-mail : <a href="mailto:sororichill@gmail.com" class="text-accent hover:underline">sororichill@gmail.com</a></p>
+          </div>
+          <p class="mt-4">Nous nous engageons à répondre à toute demande dans un délai raisonnable et conformément aux délais prévus par la réglementation applicable.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-700 text-brand-200 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-7 w-7">
+            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M700 300 A280 280 0 1 0 700 724"></path>
+              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+            </g>
+          </svg>
+          <span class="font-display font-bold text-lg text-white">Sororichill</span>
+        </div>
+        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+          <a href="privacy.html" class="text-brand-300 hover:text-white transition-colors">Politique de confidentialité</a>
+          <a href="terms.html" class="text-brand-300 hover:text-white transition-colors">Conditions d'utilisation</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" class="text-brand-300 hover:text-white transition-colors">CLUF Apple</a>
+        </nav>
+      </div>
+      <div class="border-t border-brand-500/30 mt-8 pt-8 text-center text-sm text-brand-300">
+        <p>&copy; 2025 Sororichill. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

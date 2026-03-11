@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sororichill — Découvrez et partagez des moments entre femmes</title>
+  <meta name="description" content="Sororichill est une plateforme de découverte et de réservation d'activités pensée pour les femmes. Rejoignez une communauté bienveillante et vivez des expériences uniques.">
+  <meta name="keywords" content="activités femmes, sorties entre femmes, bien-être, créatif, sportif, culturel, social, sororité">
+  <meta property="og:title" content="Sororichill — Découvrez et partagez des moments entre femmes">
+  <meta property="og:description" content="Découvrez et partagez des moments entre femmes qui vous ressemblent.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#C35817">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFFDF8',
+              100: '#FFF4E0',
+              200: '#F5F0E8',
+              300: '#D4B9A7',
+              400: '#C35817',
+              500: '#5C3D2E',
+              600: '#4A2040',
+              700: '#1A1A1A',
+            },
+            accent: {
+              DEFAULT: '#C35817',
+              light: '#E8836B',
+              warm: '#CB6B52',
+            },
+            category: {
+              creative: '#C35817',
+              sportive: '#4A6741',
+              cultural: '#4A2040',
+              wellness: '#CB6B52',
+              social: '#E8836B',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .feature-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(92,61,46,0.12); }
+    .step-line { position: relative; }
+    .step-line::after { content: ''; position: absolute; top: 50%; right: -50%; width: 100%; height: 2px; background: linear-gradient(90deg, #D4B9A7, transparent); }
+    @media (max-width: 768px) { .step-line::after { display: none; } }
+  </style>
+</head>
+<body class="bg-brand-50 text-brand-700 font-sans antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-brand-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-8 w-8">
+            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M700 300 A280 280 0 1 0 700 724"></path>
+              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+            </g>
+          </svg>
+          <span class="font-display font-bold text-xl text-accent tracking-tight">Sororichill</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-500">
+          <a href="#fonctionnalites" class="hover:text-accent transition-colors">Fonctionnalités</a>
+          <a href="privacy.html" class="hover:text-accent transition-colors">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-accent transition-colors">Conditions d'utilisation</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-brand-200/60 transition-colors" aria-label="Menu">
+          <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-brand-200/60">
+        <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-brand-500">
+          <a href="#fonctionnalites" class="hover:text-accent transition-colors py-1">Fonctionnalités</a>
+          <a href="privacy.html" class="hover:text-accent transition-colors py-1">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-accent transition-colors py-1">Conditions d'utilisation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden">
+    <!-- Decorative blobs -->
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 -left-32 w-80 h-80 bg-accent-warm/8 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 right-1/4 w-4 h-4 bg-category-sportive/30 rounded-full"></div>
+    <div class="absolute top-1/2 left-1/6 w-3 h-3 bg-accent-light/40 rounded-full"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <!-- Logo mark large -->
+      <div class="flex justify-center mb-8 fade-up">
+        <div class="bg-white/80 rounded-3xl p-5 shadow-sm border border-brand-200/50">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-16 w-16 sm:h-20 sm:w-20">
+            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M700 300 A280 280 0 1 0 700 724"></path>
+              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-brand-700 leading-tight mb-6 fade-up">
+        Découvrez et partagez des <span class="text-accent">moments entre femmes</span> qui vous ressemblent.
+      </h1>
+      <p class="text-lg sm:text-xl text-brand-500 max-w-2xl mx-auto mb-10 leading-relaxed fade-up">
+        Sororichill est la plateforme qui vous connecte à des activités inspirantes — créatives, sportives, culturelles ou bien-être — dans une communauté bienveillante et sororale.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up">
+        <a href="#" class="inline-flex items-center gap-3 bg-brand-700 text-white px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-brand-500 transition-colors shadow-lg shadow-brand-700/20">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Télécharger sur l'App Store
+        </a>
+        <a href="#" class="inline-flex items-center gap-3 bg-white text-brand-700 px-6 py-3.5 rounded-xl font-semibold text-sm border-2 border-brand-200 hover:border-accent hover:text-accent transition-colors shadow-sm">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.627L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+          Disponible sur Google Play
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="fonctionnalites" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3">Fonctionnalités</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700">Des expériences pour chaque envie</h2>
+        <p class="text-brand-500 mt-4 max-w-xl mx-auto">Explorez une variété d'activités soigneusement sélectionnées, pensées pour créer des liens authentiques entre femmes.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Creative -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FFF4E0;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#C3581715;">🎨</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#C35817;">Activités Créatives</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Ateliers peinture, poterie, écriture… Libérez votre créativité dans un espace chaleureux et inspirant.</p>
+        </div>
+
+        <!-- Sportive -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#E8F0E6;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#4A674115;">🏃‍♀️</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A6741;">Aventures Sportives</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Randonnées, yoga, danse, escalade… Repoussez vos limites et bougez ensemble en plein air ou en salle.</p>
+        </div>
+
+        <!-- Cultural -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#F0E4EE;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#4A204015;">🎭</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#4A2040;">Expériences Culturelles</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Musées, théâtre, conférences, sorties littéraires… Nourrissez votre curiosité en bonne compagnie.</p>
+        </div>
+
+        <!-- Wellness -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FCEDE8;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#CB6B5215;">🧘</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#CB6B52;">Bien-être & Relaxation</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Spa, méditation, soins holistiques… Prenez soin de vous dans un cadre apaisant et bienveillant.</p>
+        </div>
+
+        <!-- Social -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#FFE8E0;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#E8836B15;">🤝</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#E8836B;">Rencontres Sociales</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Brunchs, afterworks, soirées jeux… Tissez des amitiés sincères autour de moments conviviaux.</p>
+        </div>
+
+        <!-- Local -->
+        <div class="feature-card rounded-2xl p-6 border border-brand-200/50 cursor-default fade-up" style="background:#F5F0E8;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#5C3D2E15;">📍</div>
+          <h3 class="font-display font-semibold text-lg mb-2" style="color:#5C3D2E;">Découverte Locale</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Explorez les pépites cachées de votre ville. Marchés, quartiers insolites, balades guidées… le tout entre femmes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="py-20 sm:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <span class="inline-block text-accent font-semibold text-sm tracking-wide uppercase mb-3">Comment ça marche</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-brand-700">Trois étapes, c'est tout.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 md:gap-8">
+        <!-- Step 1 -->
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5">
+            <span class="font-display font-bold text-2xl text-accent">1</span>
+          </div>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Découvrez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Parcourez des activités triées par catégorie, lieu et date. Trouvez celle qui vous correspond en un clin d'œil.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 rounded-2xl bg-category-sportive/10 flex items-center justify-center mx-auto mb-5">
+            <span class="font-display font-bold text-2xl text-category-sportive">2</span>
+          </div>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Réservez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Inscrivez-vous en quelques taps. Paiement sécurisé, confirmation instantanée, tout est simple et fluide.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center fade-up">
+          <div class="w-16 h-16 rounded-2xl bg-accent-warm/10 flex items-center justify-center mx-auto mb-5">
+            <span class="font-display font-bold text-2xl text-accent-warm">3</span>
+          </div>
+          <h3 class="font-display font-semibold text-xl text-brand-700 mb-2">Profitez</h3>
+          <p class="text-brand-500 text-sm leading-relaxed">Vivez l'expérience, rencontrez des femmes inspirantes et créez des souvenirs inoubliables ensemble.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA SECTION ============ -->
+  <section class="py-20 sm:py-28 relative overflow-hidden" style="background: linear-gradient(135deg, #5C3D2E 0%, #C35817 50%, #CB6B52 100%);">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full"></div>
+      <div class="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-white rounded-full"></div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-5 fade-up">
+        Prête à rejoindre la communauté ?
+      </h2>
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto fade-up">
+        Téléchargez Sororichill et commencez à découvrir des activités uniques près de chez vous, entourée de femmes bienveillantes.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up">
+        <a href="#" class="inline-flex items-center gap-3 bg-white text-brand-700 px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-brand-50 transition-colors shadow-lg">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          App Store
+        </a>
+        <a href="#" class="inline-flex items-center gap-3 bg-white/15 text-white border-2 border-white/30 px-6 py-3.5 rounded-xl font-semibold text-sm hover:bg-white/25 transition-colors">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 010 1.732l-2.807 1.627L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+          Google Play
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-brand-700 text-white/70 py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
+        <!-- Branding -->
+        <div class="flex flex-col items-center md:items-start gap-3">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-7 w-7">
+              <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M700 300 A280 280 0 1 0 700 724"></path>
+                <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+              </g>
+            </svg>
+            <span class="font-display font-bold text-lg text-white">Sororichill</span>
+          </div>
+          <p class="text-sm text-white/50 max-w-xs text-center md:text-left">Des moments uniques entre femmes, partout près de chez vous.</p>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="flex flex-col items-center md:items-end gap-3 text-sm">
+          <span class="font-semibold text-white/90 text-xs uppercase tracking-wide">Informations légales</span>
+          <a href="privacy.html" class="hover:text-white transition-colors">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">CLUF Apple</a>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-white/40">© 2025 Sororichill. Tous droits réservés.</p>
+        <!-- Social Icons -->
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/sororichill" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-accent transition-colors" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@sororichill" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-accent transition-colors" aria-label="TikTok">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13a8.28 8.28 0 005.58 2.17v-3.44a4.85 4.85 0 01-2.65-.78V6.69h2.65z"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

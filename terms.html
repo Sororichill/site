@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions d'utilisation — Sororichill</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFFDF8',
+              100: '#FFF4E0',
+              200: '#F5F0E8',
+              300: '#D4B9A7',
+              400: '#C35817',
+              500: '#5C3D2E',
+              600: '#4A2040',
+              700: '#1A1A1A',
+            },
+            accent: {
+              DEFAULT: '#C35817',
+              light: '#E8836B',
+              warm: '#CB6B52',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      nav, footer { display: none; }
+      body { font-size: 12pt; }
+      .no-print { display: none; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="bg-brand-50 font-sans text-brand-700 antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-8 w-8">
+          <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M700 300 A280 280 0 1 0 700 724"></path>
+            <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+          </g>
+        </svg>
+        <span class="font-display font-bold text-xl text-accent">Sororichill</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-brand-500 hover:text-accent transition-colors">Accueil</a>
+        <a href="privacy.html" class="text-brand-500 hover:text-accent transition-colors">Politique de confidentialité</a>
+        <a href="terms.html" class="text-accent border-b-2 border-accent pb-0.5">Conditions d'utilisation</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-brand-100 transition-colors" aria-label="Menu">
+        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="hidden sm:hidden border-t border-brand-200 bg-white px-4 py-3 space-y-2">
+      <a href="index.html" class="block text-sm text-brand-500 hover:text-accent py-1">Accueil</a>
+      <a href="privacy.html" class="block text-sm text-brand-500 hover:text-accent py-1">Politique de confidentialité</a>
+      <a href="terms.html" class="block text-sm text-accent font-semibold py-1">Conditions d'utilisation</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-br from-brand-50 via-brand-100 to-[#FFE8D6] py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-brand-700 mb-4">Conditions d'utilisation</h1>
+      <p class="text-brand-500 text-base sm:text-lg">Date d'effet&nbsp;: <strong>11 mars 2025</strong></p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12">
+
+    <!-- 1. Acceptation des conditions -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">1</span>
+        Acceptation des conditions
+      </h2>
+      <div class="prose prose-brand space-y-3 text-brand-700/90 leading-relaxed">
+        <p>En accédant à l'application Sororichill ou en l'utilisant, vous confirmez avoir lu, compris et accepté les présentes Conditions d'utilisation. Si vous n'acceptez pas ces conditions, vous ne devez pas utiliser l'application.</p>
+        <p>L'utilisation continue de Sororichill après toute modification des présentes conditions constitue une acceptation des conditions révisées. Nous vous encourageons à consulter régulièrement cette page pour rester informée des éventuelles mises à jour.</p>
+      </div>
+    </section>
+
+    <!-- 2. Éligibilité -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">2</span>
+        Éligibilité
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Pour utiliser Sororichill, vous devez&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Être âgée d'au moins <strong>18 ans</strong> ou avoir atteint l'âge de la majorité légale dans votre juridiction.</li>
+          <li>Sororichill est une plateforme conçue pour les <strong>femmes</strong>. En créant un compte, vous confirmez que vous êtes une femme ou que vous vous identifiez comme telle.</li>
+          <li>Posséder la capacité juridique de conclure un contrat contraignant.</li>
+          <li>Ne pas être une personne frappée d'interdiction d'utilisation de nos services en vertu d'une loi applicable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Création de compte -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">3</span>
+        Création de compte
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Pour accéder à certaines fonctionnalités de Sororichill, vous devez créer un compte. Lors de l'inscription, vous vous engagez à&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Fournir des informations <strong>exactes, complètes et à jour</strong>.</li>
+          <li>Maintenir la confidentialité de vos identifiants de connexion.</li>
+          <li>Nous informer immédiatement de toute utilisation non autorisée de votre compte.</li>
+          <li>Ne pas créer de compte au nom d'une autre personne sans son consentement.</li>
+        </ul>
+        <p>Vous êtes entièrement responsable de toute activité réalisée sous votre compte. Sororichill décline toute responsabilité en cas de perte ou de dommage résultant de votre manquement à sécuriser vos identifiants.</p>
+      </div>
+    </section>
+
+    <!-- 4. CLUF -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">4</span>
+        Contrat de licence utilisateur final (CLUF)
+      </h2>
+
+      <!-- 4.1 iOS -->
+      <div class="mt-6 rounded-xl border-2 border-accent/30 bg-gradient-to-br from-white to-brand-100/60 p-6 sm:p-8">
+        <h3 class="font-display font-semibold text-lg text-brand-700 mb-3">4.1&ensp;Utilisatrices iOS — CLUF Standard Apple</h3>
+        <p class="text-brand-700/90 leading-relaxed mb-4">Si vous avez téléchargé Sororichill depuis l'<strong>App Store d'Apple</strong>, votre utilisation de l'application est également régie par le <strong>Contrat de Licence Utilisateur Final Standard d'Apple</strong> (<em>Standard Apple EULA</em>). Ce contrat est incorporé aux présentes conditions par référence.</p>
+        <p class="text-brand-700/90 leading-relaxed mb-5">En cas de conflit entre les présentes Conditions d'utilisation et le CLUF Standard d'Apple, les termes du CLUF Standard d'Apple prévaudront dans la mesure applicable aux utilisatrices iOS.</p>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-white font-semibold text-sm hover:bg-accent-warm transition-colors shadow-sm shadow-accent/20">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-4.5-4.5h6m0 0v6m0-6L9.75 14.25"/></svg>
+          Lire le CLUF Standard Apple
+        </a>
+      </div>
+
+      <!-- 4.2 Android -->
+      <div class="mt-6 rounded-xl border border-brand-200 bg-white p-6 sm:p-8">
+        <h3 class="font-display font-semibold text-lg text-brand-700 mb-3">4.2&ensp;Utilisatrices Android</h3>
+        <p class="text-brand-700/90 leading-relaxed mb-4">Si vous avez téléchargé Sororichill depuis <strong>Google Play</strong>, les conditions standard du Google Play Store s'appliquent en complément des présentes Conditions d'utilisation.</p>
+        <a href="https://play.google.com/intl/fr/about/play-terms/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:underline">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-4.5-4.5h6m0 0v6m0-6L9.75 14.25"/></svg>
+          Conditions d'utilisation Google Play
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. Conduite des utilisatrices -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">5</span>
+        Conduite des utilisatrices
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Sororichill est un espace bienveillant fondé sur le <strong>respect mutuel</strong>. En utilisant la plateforme, vous vous engagez à&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Traiter les autres utilisatrices avec respect et courtoisie.</li>
+          <li>Ne pas publier de contenu haineux, discriminatoire, menaçant, harcelant ou diffamatoire.</li>
+          <li>Ne pas utiliser la plateforme à des fins frauduleuses, illégales ou commerciales non autorisées.</li>
+          <li>Ne pas usurper l'identité d'une autre personne ou entité.</li>
+          <li>Ne pas collecter ou stocker les données personnelles d'autres utilisatrices sans leur consentement.</li>
+          <li>Ne pas tenter de contourner les mesures de sécurité ou d'accéder à des zones non autorisées de la plateforme.</li>
+          <li>Ne pas diffuser de spam, de publicités non sollicitées ou de contenu promotionnel sans autorisation.</li>
+        </ul>
+        <p>Tout manquement à ces règles peut entraîner la <strong>suspension ou la résiliation</strong> de votre compte, à notre entière discrétion.</p>
+      </div>
+    </section>
+
+    <!-- 6. Publications d'activités -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">6</span>
+        Publications d'activités
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Les organisatrices qui publient des activités sur Sororichill s'engagent à&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Fournir des descriptions <strong>exactes et complètes</strong> de l'activité proposée, y compris le lieu, la date, l'heure, le prix et les conditions de participation.</li>
+          <li>S'assurer que l'activité respecte les lois et réglementations applicables.</li>
+          <li>Garantir la <strong>sécurité</strong> des participantes dans la mesure du raisonnable.</li>
+          <li>Mettre à jour ou annuler rapidement toute activité en cas de changement de circonstances.</li>
+          <li>Ne pas publier de contenu trompeur, frauduleux ou contraire aux valeurs de la communauté Sororichill.</li>
+        </ul>
+        <p>Sororichill se réserve le droit de retirer toute publication qui ne respecte pas ces règles ou qui fait l'objet de signalements de la part des utilisatrices.</p>
+      </div>
+    </section>
+
+    <!-- 7. Réservations -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">7</span>
+        Réservations
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Lorsque vous réservez une activité via Sororichill&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Votre réservation est soumise à la <strong>disponibilité</strong> et à la confirmation par l'organisatrice.</li>
+          <li>Vous recevrez une <strong>confirmation</strong> par notification et/ou par e-mail une fois la réservation validée.</li>
+          <li>En effectuant une réservation, vous vous engagez à respecter les conditions spécifiques de l'activité, telles que définies par l'organisatrice.</li>
+          <li>Sororichill agit en tant qu'<strong>intermédiaire</strong> entre les utilisatrices et les organisatrices et ne garantit pas la tenue effective de l'activité.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. Politique d'annulation et de remboursement -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">8</span>
+        Politique d'annulation et de remboursement
+      </h2>
+      <div class="space-y-4 text-brand-700/90 leading-relaxed">
+        <div>
+          <h3 class="font-semibold text-brand-700 mb-2">Annulation par l'utilisatrice</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Toute annulation effectuée <strong>48 heures ou plus</strong> avant le début de l'activité donne droit à un remboursement intégral.</li>
+            <li>Les annulations effectuées entre <strong>24 et 48 heures</strong> avant l'activité peuvent donner lieu à un remboursement partiel (50&nbsp;%).</li>
+            <li>Les annulations effectuées <strong>moins de 24 heures</strong> avant l'activité ne sont généralement pas remboursables, sauf circonstances exceptionnelles.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-brand-700 mb-2">Annulation par l'organisatrice</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Si une organisatrice annule une activité, les participantes inscrites reçoivent un <strong>remboursement intégral</strong>.</li>
+            <li>Les annulations répétées par une organisatrice peuvent entraîner des sanctions, y compris la suspension de son compte.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-brand-700 mb-2">Délais de remboursement</h3>
+          <p>Les remboursements sont traités dans un délai de <strong>5 à 10 jours ouvrables</strong> à compter de l'approbation de la demande. Le délai exact dépend de votre établissement bancaire ou de votre fournisseur de paiement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Paiements -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">9</span>
+        Paiements
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Les paiements sur Sororichill sont traités de manière sécurisée via <strong>Stripe</strong>. En effectuant un paiement, vous acceptez les conditions suivantes&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Tous les paiements sont effectués en <strong>euros (€)</strong>, sauf indication contraire.</li>
+          <li>Sororichill ne stocke pas vos informations de carte bancaire. Celles-ci sont traitées directement par Stripe conformément aux normes de sécurité <strong>PCI DSS</strong>.</li>
+          <li>Des frais de transaction peuvent s'appliquer et seront clairement indiqués avant la finalisation du paiement.</li>
+          <li>En cas de litige concernant un paiement, veuillez nous contacter à <a href="mailto:sororichill@gmail.com" class="text-accent hover:underline">sororichill@gmail.com</a> dans un délai de 30 jours.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10. Responsabilités des organisatrices -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">10</span>
+        Responsabilités des organisatrices
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Les organisatrices d'activités sur Sororichill ont les responsabilités suivantes&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Fournir des <strong>descriptions exactes et non trompeuses</strong> de leurs activités.</li>
+          <li>Assurer la <strong>sécurité physique</strong> des participantes pendant toute la durée de l'activité.</li>
+          <li>Souscrire une <strong>assurance responsabilité civile</strong> adaptée si la nature de l'activité l'exige.</li>
+          <li>Se conformer à toutes les <strong>lois et réglementations locales</strong> applicables, y compris les licences, permis et autorisations nécessaires.</li>
+          <li>Respecter les normes d'<strong>hygiène et de sécurité</strong> en vigueur.</li>
+          <li>Informer les participantes de tout risque connu lié à l'activité.</li>
+        </ul>
+        <p>Sororichill décline toute responsabilité en cas de dommage résultant d'une activité organisée par une utilisatrice tierce.</p>
+      </div>
+    </section>
+
+    <!-- 11. Approbation des organisatrices -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">11</span>
+        Approbation des organisatrices
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Sororichill se réserve le droit, à sa seule discrétion, de&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li><strong>Approuver ou rejeter</strong> toute demande de publication d'activité.</li>
+          <li>Demander des informations ou documents complémentaires avant d'autoriser la publication.</li>
+          <li><strong>Suspendre ou retirer</strong> une activité publiée si elle ne respecte pas les présentes conditions ou si elle fait l'objet de plaintes.</li>
+          <li>Révoquer le statut d'organisatrice en cas de manquement répété aux règles de la plateforme.</li>
+        </ul>
+        <p>Les décisions d'approbation ou de rejet sont définitives et ne peuvent faire l'objet d'un recours, sauf dans les cas prévus par la loi.</p>
+      </div>
+    </section>
+
+    <!-- 12. Commissions et frais -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">12</span>
+        Commissions et frais
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Pour chaque activité payante réservée via Sororichill, la plateforme perçoit une <strong>commission</strong> sur le montant de la transaction. Cette commission est destinée à couvrir les frais de fonctionnement de la plateforme, notamment&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Les frais de traitement des paiements.</li>
+          <li>La maintenance et le développement de l'application.</li>
+          <li>Le support utilisatrices.</li>
+        </ul>
+        <p>Le taux de commission applicable est communiqué aux organisatrices lors de leur inscription et peut être révisé avec un préavis de <strong>30 jours</strong>. Les organisatrices reçoivent le solde du montant de la transaction après déduction de la commission et des frais de paiement.</p>
+      </div>
+    </section>
+
+    <!-- 13. Propriété intellectuelle -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">13</span>
+        Propriété intellectuelle
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>L'ensemble des éléments constituant la plateforme Sororichill — y compris, sans limitation, le code source, le design, les logos, les marques, les textes, les illustrations et les bases de données — sont la <strong>propriété exclusive</strong> de Sororichill ou de ses concédants de licence.</p>
+        <p>Toute reproduction, modification, distribution ou exploitation non autorisée de ces éléments est strictement interdite et constitue une violation du droit de la propriété intellectuelle, passible de poursuites judiciaires.</p>
+        <p>L'utilisation de la plateforme ne vous confère aucun droit de propriété intellectuelle sur Sororichill ou sur son contenu, en dehors du droit limité d'utilisation accordé par les présentes conditions.</p>
+      </div>
+    </section>
+
+    <!-- 14. Contenu des utilisatrices -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">14</span>
+        Contenu des utilisatrices
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>En publiant du contenu sur Sororichill (photos, messages, descriptions, avis, etc.), vous&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Conservez la <strong>propriété</strong> de votre contenu.</li>
+          <li>Accordez à Sororichill une licence <strong>non exclusive, mondiale, gratuite, transférable et sous-licenciable</strong> pour utiliser, reproduire, modifier, adapter, publier et afficher ce contenu dans le cadre du fonctionnement et de la promotion de la plateforme.</li>
+          <li>Garantissez que votre contenu ne viole aucun droit de tiers, y compris les droits de propriété intellectuelle, le droit à l'image et le droit à la vie privée.</li>
+          <li>Acceptez que Sororichill puisse retirer tout contenu qui viole les présentes conditions ou qui fait l'objet de signalements.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 15. Limitation de responsabilité -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">15</span>
+        Limitation de responsabilité
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Sororichill est une <strong>plateforme de mise en relation</strong> entre utilisatrices et organisatrices d'activités. À ce titre&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Sororichill ne garantit pas la qualité, la sécurité ou la légalité des activités proposées par les organisatrices.</li>
+          <li>Sororichill ne saurait être tenue responsable des <strong>dommages directs, indirects, accessoires, spéciaux ou consécutifs</strong> résultant de l'utilisation de la plateforme ou de la participation à une activité.</li>
+          <li>La responsabilité totale de Sororichill, toutes causes confondues, est limitée au montant que vous avez effectivement versé à Sororichill au cours des <strong>12 derniers mois</strong>.</li>
+          <li>Sororichill ne garantit pas que la plateforme sera disponible de manière ininterrompue, sans erreur ou exempte de virus.</li>
+        </ul>
+        <p>Les limitations ci-dessus s'appliquent dans toute la mesure permise par la loi applicable.</p>
+      </div>
+    </section>
+
+    <!-- 16. Indemnisation -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">16</span>
+        Indemnisation
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Vous acceptez d'indemniser, de défendre et de dégager de toute responsabilité Sororichill, ses dirigeants, administrateurs, employés, agents et partenaires contre toute réclamation, perte, responsabilité, dommage, coût et dépense (y compris les honoraires d'avocats raisonnables) découlant de&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Votre utilisation de la plateforme ou votre violation des présentes conditions.</li>
+          <li>Votre contenu publié sur la plateforme.</li>
+          <li>Votre violation des droits de tiers.</li>
+          <li>Toute activité que vous organisez via Sororichill.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 17. Résolution des litiges -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">17</span>
+        Résolution des litiges
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Les présentes Conditions d'utilisation sont régies par le <strong>droit français</strong>.</p>
+        <p>En cas de litige relatif à l'interprétation, l'exécution ou la résiliation des présentes conditions, les parties s'engagent à rechercher une solution amiable par voie de <strong>médiation</strong> avant toute action judiciaire.</p>
+        <p>Si la médiation échoue, le litige sera soumis à la compétence exclusive des <strong>tribunaux de Paris, France</strong>.</p>
+        <p>Conformément aux dispositions du Code de la consommation, vous pouvez également recourir à un <strong>médiateur de la consommation</strong> pour la résolution de tout différend.</p>
+      </div>
+    </section>
+
+    <!-- 18. Résiliation -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">18</span>
+        Résiliation
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Sororichill se réserve le droit de <strong>suspendre ou résilier</strong> votre compte, à tout moment et sans préavis, si&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Vous violez les présentes Conditions d'utilisation.</li>
+          <li>Votre comportement porte atteinte à la sécurité ou au bien-être des autres utilisatrices.</li>
+          <li>Nous soupçonnons une activité frauduleuse ou illégale sur votre compte.</li>
+          <li>Votre compte est inactif pendant une période prolongée.</li>
+        </ul>
+        <p>Vous pouvez également résilier votre compte à tout moment en nous contactant ou en utilisant la fonctionnalité de suppression de compte dans l'application. La résiliation n'affecte pas les obligations nées avant la date de résiliation.</p>
+      </div>
+    </section>
+
+    <!-- 19. Modifications des conditions -->
+    <section>
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">19</span>
+        Modifications des conditions
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Sororichill se réserve le droit de <strong>modifier les présentes Conditions d'utilisation</strong> à tout moment. En cas de modification substantielle, nous vous en informerons par&nbsp;:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Une notification dans l'application.</li>
+          <li>Un e-mail envoyé à l'adresse associée à votre compte.</li>
+          <li>Une mise à jour de la date d'effet figurant en haut de cette page.</li>
+        </ul>
+        <p>Votre utilisation continue de Sororichill après la publication des modifications constitue votre acceptation des nouvelles conditions. Si vous n'acceptez pas les modifications, vous devez cesser d'utiliser l'application et supprimer votre compte.</p>
+      </div>
+    </section>
+
+    <!-- 20. Contact -->
+    <section class="rounded-xl bg-gradient-to-br from-brand-100 to-brand-200/60 p-6 sm:p-8">
+      <h2 class="font-display font-bold text-xl sm:text-2xl text-brand-700 mb-4 flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent/10 text-accent text-sm font-bold">20</span>
+        Contact
+      </h2>
+      <div class="space-y-3 text-brand-700/90 leading-relaxed">
+        <p>Pour toute question ou préoccupation concernant les présentes Conditions d'utilisation, vous pouvez nous contacter à&nbsp;:</p>
+        <a href="mailto:sororichill@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-500 text-white font-semibold text-sm hover:bg-brand-700 transition-colors shadow-sm mt-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          sororichill@gmail.com
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-700 text-brand-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-6 w-6">
+            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M700 300 A280 280 0 1 0 700 724"></path>
+              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+            </g>
+          </svg>
+          <span class="font-display font-bold text-lg text-white">Sororichill</span>
+        </div>
+        <nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+          <a href="privacy.html" class="hover:text-white transition-colors">Politique de confidentialité</a>
+          <a href="terms.html" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">CLUF Apple</a>
+        </nav>
+      </div>
+      <div class="mt-6 pt-6 border-t border-brand-500/30 text-center text-sm text-brand-300">
+        &copy; 2025 Sororichill. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
