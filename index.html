@@ -61,61 +61,49 @@
     .step-line { position: relative; }
     .step-line::after { content: ''; position: absolute; top: 50%; right: -50%; width: 100%; height: 2px; background: linear-gradient(90deg, #D4B9A7, transparent); }
     @media (max-width: 768px) { .step-line::after { display: none; } }
-    .lang-toggle { display: flex; align-items: center; border-radius: 9999px; padding: 2px; font-size: 0.75rem; font-weight: 600; }
-    .lang-toggle button { padding: 3px 10px; border-radius: 9999px; transition: all 0.2s ease; cursor: pointer; border: none; background: none; }
-    .lang-toggle button.active { background: #C35817; color: white; }
-    .lang-toggle button:not(.active) { color: #5C3D2E; }
-    .lang-toggle button:not(.active):hover { color: #C35817; }
+
+
   </style>
 </head>
 <body class="bg-brand-50 text-brand-700 font-sans antialiased">
 
   <!-- ============ HEADER ============ -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-50/90 backdrop-blur-md border-b border-brand-200/60">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 group">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-8 w-8 rounded-lg">
-            <rect width="1024" height="1024" rx="180" fill="#5C3D2E"/>
-            <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M700 300 A280 280 0 1 0 700 724"></path>
-              <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
-            </g>
-          </svg>
-          <span class="font-display font-bold text-xl text-accent tracking-tight">Sororichill</span>
-        </a>
-
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-500">
-          <a href="privacy.html" class="hover:text-accent transition-colors" data-i18n="nav_privacy">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-accent transition-colors" data-i18n="nav_terms">Conditions d'utilisation</a>
-          <a href="cancellation.html" class="hover:text-accent transition-colors" data-i18n="nav_cancellation">Politique d'annulation</a>
-          <div class="lang-toggle bg-brand-200/60">
-            <button id="langFrDesktop" onclick="setLanguage('fr')">FR</button>
-            <button id="langEnDesktop" onclick="setLanguage('en')">EN</button>
-          </div>
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-brand-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="h-8 w-8 rounded-lg">
+          <rect width="1024" height="1024" rx="180" fill="#5C3D2E"/>
+          <g fill="none" stroke="#C35817" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M700 300 A280 280 0 1 0 700 724"></path>
+            <path d="M640 360 C520 260 360 360 480 460 C620 560 420 640 380 700"></path>
+          </g>
+        </svg>
+        <span class="font-display font-bold text-xl text-accent">Sororichill</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-6">
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/" data-i18n="nav_home" class="text-accent border-b-2 border-accent pb-0.5">Accueil</a>
+          <a href="privacy" data-i18n="nav_privacy" class="text-brand-500 hover:text-accent transition-colors">Politique de confidentialité</a>
+          <a href="terms" data-i18n="nav_terms" class="text-brand-500 hover:text-accent transition-colors">Conditions d'utilisation</a>
+          <a href="cancellation" data-i18n="nav_cancellation" class="text-brand-500 hover:text-accent transition-colors">Politique d'annulation</a>
         </nav>
-
-        <!-- Mobile Hamburger -->
-        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-brand-200/60 transition-colors" aria-label="Menu">
-          <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+        <div class="flex items-center rounded-full border border-brand-300/50 overflow-hidden text-sm">
+          <button onclick="setLanguage('fr')" id="langFrDesktop" class="px-3 py-1 font-medium transition-colors">FR</button>
+          <button onclick="setLanguage('en')" id="langEnDesktop" class="px-3 py-1 font-medium transition-colors">EN</button>
+        </div>
       </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="md:hidden hidden pb-4 border-t border-brand-200/60">
-        <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-brand-500">
-          <a href="privacy.html" class="hover:text-accent transition-colors py-1" data-i18n="nav_privacy">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-accent transition-colors py-1" data-i18n="nav_terms">Conditions d'utilisation</a>
-          <a href="cancellation.html" class="hover:text-accent transition-colors py-1" data-i18n="nav_cancellation">Politique d'annulation</a>
-          <div class="lang-toggle bg-brand-200/60 self-start mt-1">
-            <button id="langFrMobile" onclick="setLanguage('fr')">FR</button>
-            <button id="langEnMobile" onclick="setLanguage('en')">EN</button>
-          </div>
-        </nav>
+      <button id="menuBtn" class="sm:hidden p-2 rounded-lg hover:bg-brand-100 transition-colors" aria-label="Menu">
+        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden sm:hidden border-t border-brand-200 bg-white px-4 py-3 space-y-2">
+      <a href="/" data-i18n="nav_home" class="block text-sm text-accent font-semibold py-1">Accueil</a>
+      <a href="privacy" data-i18n="nav_privacy" class="block text-sm text-brand-500 hover:text-accent py-1">Politique de confidentialité</a>
+      <a href="terms" data-i18n="nav_terms" class="block text-sm text-brand-500 hover:text-accent py-1">Conditions d'utilisation</a>
+      <a href="cancellation" data-i18n="nav_cancellation" class="block text-sm text-brand-500 hover:text-accent py-1">Politique d'annulation</a>
+      <div class="flex items-center rounded-full border border-brand-300/50 overflow-hidden text-sm w-fit mt-2">
+        <button onclick="setLanguage('fr')" id="langFrMobile" class="px-3 py-1 font-medium transition-colors">FR</button>
+        <button onclick="setLanguage('en')" id="langEnMobile" class="px-3 py-1 font-medium transition-colors">EN</button>
       </div>
     </div>
   </header>
@@ -308,9 +296,9 @@
         <!-- Legal Links -->
         <div class="flex flex-col items-center md:items-end gap-3 text-sm">
           <span class="font-semibold text-white/90 text-xs uppercase tracking-wide" data-i18n="footer_legal_label">Informations légales</span>
-          <a href="privacy.html" class="hover:text-white transition-colors" data-i18n="nav_privacy">Politique de confidentialité</a>
-          <a href="terms.html" class="hover:text-white transition-colors" data-i18n="nav_terms">Conditions d'utilisation</a>
-          <a href="cancellation.html" class="hover:text-white transition-colors" data-i18n="nav_cancellation">Politique d'annulation</a>
+          <a href="privacy" class="hover:text-white transition-colors" data-i18n="nav_privacy">Politique de confidentialité</a>
+          <a href="terms" class="hover:text-white transition-colors" data-i18n="nav_terms">Conditions d'utilisation</a>
+          <a href="cancellation" class="hover:text-white transition-colors" data-i18n="nav_cancellation">Politique d'annulation</a>
           <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" data-i18n="footer_eula">CLUF Apple</a>
         </div>
       </div>
@@ -338,6 +326,7 @@
     const translations = {
       fr: {
         nav_features: 'Fonctionnalités',
+        nav_home: 'Accueil',
         nav_privacy: 'Politique de confidentialité',
         nav_terms: "Conditions d'utilisation",
         nav_cancellation: "Politique d'annulation",
@@ -381,6 +370,7 @@
       },
       en: {
         nav_features: 'Features',
+        nav_home: 'Home',
         nav_privacy: 'Privacy Policy',
         nav_terms: 'Terms of Service',
         nav_cancellation: 'Cancellation Policy',
@@ -454,10 +444,12 @@
 
       // Update toggle button states
       document.querySelectorAll('[id^="langFr"]').forEach(function(btn) {
-        btn.classList.toggle('active', lang === 'fr');
+        if (lang === 'fr') { btn.style.background = '#C35817'; btn.style.color = 'white'; }
+        else { btn.style.background = 'transparent'; btn.style.color = '#5C3D2E'; }
       });
       document.querySelectorAll('[id^="langEn"]').forEach(function(btn) {
-        btn.classList.toggle('active', lang === 'en');
+        if (lang === 'en') { btn.style.background = '#C35817'; btn.style.color = 'white'; }
+        else { btn.style.background = 'transparent'; btn.style.color = '#5C3D2E'; }
       });
     }
 
